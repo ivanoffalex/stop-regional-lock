@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using BLToolkit.Data;
+using System.Configuration;
+using System.Diagnostics;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -14,6 +13,14 @@ namespace StopRegionalLock.WebSite
     {
         protected void Application_Start()
         {
+            using (var db = new DbManager(ConfigurationManager.AppSettings["DbProvider"], string.Empty))
+            {
+                db.SetCommand("SELECT 1");
+                int i = db.ExecuteScalar<int>();
+                Debug.Write(i);
+            }
+            
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
