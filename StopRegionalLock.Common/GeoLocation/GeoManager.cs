@@ -60,8 +60,7 @@ namespace StopRegionalLock.Common.GeoLocation
                 }
                 else
                 {
-#warning add nLog support
-                    //typeof(GeoManager).Error(ex);
+                    typeof(GeoManager).Error(ex);
                 }
             }
 

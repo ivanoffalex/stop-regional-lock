@@ -1,5 +1,6 @@
 ﻿using BLToolkit.Data;
 using MaxMind.GeoIP;
+using StopRegionalLock.Common;
 using StopRegionalLock.Common.GeoLocation;
 using System.Configuration;
 using System.Diagnostics;
@@ -15,7 +16,10 @@ namespace StopRegionalLock.WebSite
     {
         protected void Application_Start()
         {
-            using (var db = new DbManager(ConfigurationManager.AppSettings["DbProvider"], string.Empty))
+            typeof(MvcApplication).Info("Application");
+
+            using (var db = 
+                new DbManager(ConfigurationManager.AppSettings["DbProvider"], string.Empty))
             {
                 db.SetCommand("SELECT 1");
                 int i = db.ExecuteScalar<int>();

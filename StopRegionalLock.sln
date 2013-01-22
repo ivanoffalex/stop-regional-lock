@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FDE15E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".items", ".items", "{76975DF5-D98B-4C9F-AE9C-F3C8BF425B64}"
 	ProjectSection(SolutionItems) = preProject
+		nlog.config = nlog.config
 		setup.config = setup.config
 	EndProjectSection
 EndProject
