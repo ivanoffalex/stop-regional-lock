@@ -1,4 +1,6 @@
 ﻿using BLToolkit.Data;
+using MaxMind.GeoIP;
+using StopRegionalLock.Common.GeoLocation;
 using System.Configuration;
 using System.Diagnostics;
 using System.Web.Http;
@@ -19,7 +21,8 @@ namespace StopRegionalLock.WebSite
                 int i = db.ExecuteScalar<int>();
                 Debug.Write(i);
             }
-            
+
+            Country c = GeoManager.Instance.GetCountryByIp("194.135.115.89");
 
             AreaRegistration.RegisterAllAreas();
 

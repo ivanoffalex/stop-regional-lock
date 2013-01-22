@@ -47,6 +47,10 @@
     <Reference Include="BLToolkit.Data.DataProvider.PostgreSQL.4">
       <HintPath>..\packages\BLToolkit.PostgreSql.4.1.16\lib\net40\BLToolkit.Data.DataProvider.PostgreSQL.4.dll</HintPath>
     </Reference>
+    <Reference Include="MaxMind.GeoIP, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MaxMind.GeoIP.2.1.17\lib\net35\MaxMind.GeoIP.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
@@ -137,12 +141,28 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StopRegionalLock.Common\StopRegionalLock.Common.csproj">
+      <Project>{5f5dcd3e-4581-495a-9256-89f1ed6f0688}</Project>
+      <Name>StopRegionalLock.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StopRegionalLock.Data.BusinessLogic\StopRegionalLock.Data.BusinessLogic.csproj">
+      <Project>{e39b0799-680b-45fa-be75-51f3903f094b}</Project>
+      <Name>StopRegionalLock.Data.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StopRegionalLock.Data\StopRegionalLock.Data.csproj">
+      <Project>{4874c3a4-8a21-481a-af12-151d0927cb21}</Project>
+      <Name>StopRegionalLock.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\GeoIP.dat" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

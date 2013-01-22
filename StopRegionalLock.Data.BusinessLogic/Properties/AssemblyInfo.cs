@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StopRegionalLock.BusinessLogic")]
+[assembly: AssemblyTitle("StopRegionalLock.Data.BusinessLogic")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StopRegionalLock.BusinessLogic")]
+[assembly: AssemblyProduct("StopRegionalLock.Data.BusinessLogic")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ef8aea8e-0736-4b28-a037-8c6731f1e8dd")]
+[assembly: Guid("105b7902-882d-4db3-9fda-28505ae126e2")]
 
 // Version information for an assembly consists of the following four values:
 //

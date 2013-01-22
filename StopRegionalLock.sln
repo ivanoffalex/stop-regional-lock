@@ -3,9 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopRegionalLock.Data", "StopRegionalLock.Data\StopRegionalLock.Data.csproj", "{4874C3A4-8A21-481A-AF12-151D0927CB21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopRegionalLock.BusinessLogic", "StopRegionalLock.BusinessLogic\StopRegionalLock.BusinessLogic.csproj", "{BA0D208B-620D-46B0-949C-EE4098CDD239}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopRegionalLock.WebSite", "StopRegionalLock.WebSite\StopRegionalLock.WebSite.csproj", "{18160FA9-F9D6-41BE-99EA-57C2BF10F922}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5F5DCD3E-4581-495A-9256-89F1ED6F0688} = {5F5DCD3E-4581-495A-9256-89F1ED6F0688}
+		{E39B0799-680B-45FA-BE75-51F3903F094B} = {E39B0799-680B-45FA-BE75-51F3903F094B}
+		{4874C3A4-8A21-481A-AF12-151D0927CB21} = {4874C3A4-8A21-481A-AF12-151D0927CB21}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FDE15E30-2FB1-42E9-A876-77E708CB86D9}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".items", ".items", "{76975D
 		setup.config = setup.config
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopRegionalLock.Common", "StopRegionalLock.Common\StopRegionalLock.Common.csproj", "{5F5DCD3E-4581-495A-9256-89F1ED6F0688}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopRegionalLock.Data.BusinessLogic", "StopRegionalLock.Data.BusinessLogic\StopRegionalLock.Data.BusinessLogic.csproj", "{E39B0799-680B-45FA-BE75-51F3903F094B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,14 +36,18 @@ Global
 		{4874C3A4-8A21-481A-AF12-151D0927CB21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4874C3A4-8A21-481A-AF12-151D0927CB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4874C3A4-8A21-481A-AF12-151D0927CB21}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA0D208B-620D-46B0-949C-EE4098CDD239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA0D208B-620D-46B0-949C-EE4098CDD239}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA0D208B-620D-46B0-949C-EE4098CDD239}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA0D208B-620D-46B0-949C-EE4098CDD239}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18160FA9-F9D6-41BE-99EA-57C2BF10F922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18160FA9-F9D6-41BE-99EA-57C2BF10F922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18160FA9-F9D6-41BE-99EA-57C2BF10F922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18160FA9-F9D6-41BE-99EA-57C2BF10F922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F5DCD3E-4581-495A-9256-89F1ED6F0688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F5DCD3E-4581-495A-9256-89F1ED6F0688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F5DCD3E-4581-495A-9256-89F1ED6F0688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F5DCD3E-4581-495A-9256-89F1ED6F0688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E39B0799-680B-45FA-BE75-51F3903F094B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E39B0799-680B-45FA-BE75-51F3903F094B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E39B0799-680B-45FA-BE75-51F3903F094B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E39B0799-680B-45FA-BE75-51F3903F094B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
