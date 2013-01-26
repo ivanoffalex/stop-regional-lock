@@ -2,6 +2,8 @@
 using MaxMind.GeoIP;
 using StopRegionalLock.Common;
 using StopRegionalLock.Common.GeoLocation;
+using StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord;
+using System;
 using System.Configuration;
 using System.Diagnostics;
 using System.Web.Http;
@@ -17,6 +19,11 @@ namespace StopRegionalLock.WebSite
         protected void Application_Start()
         {
             typeof(MvcApplication).Info("Application");
+
+            CDRConfig.Instance.ServerCacheTime = DateTime.Now;
+            CDRConfig.Save();
+
+            CDRConfig.Instance.ServerCacheTime.ToShortDateString();
 
             using (var db = 
                 new DbManager(ConfigurationManager.AppSettings["DbProvider"], string.Empty))

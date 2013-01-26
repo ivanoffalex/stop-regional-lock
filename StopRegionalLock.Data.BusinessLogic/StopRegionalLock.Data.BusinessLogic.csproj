@@ -53,6 +53,7 @@
     <Compile Include="SteamContentDescriptionRecord\cdrCDR.cs" />
     <Compile Include="SteamContentDescriptionRecord\cdrApplication.cs" />
     <Compile Include="SteamContentDescriptionRecord\cdrFileSystem.cs" />
+    <Compile Include="SteamContentDescriptionRecord\cdrServerConfig.cs" />
     <Compile Include="SteamContentDescriptionRecord\cdrSubscription.cs" />
   </ItemGroup>
   <ItemGroup>
