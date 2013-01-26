@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
 {
     [ProtoContract]
-    public class cdrApplication
+    public class CDRApplication
     {
         [BlobField(2)]
         [ProtoMember(1)]
@@ -21,11 +21,11 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
 
         [BlobField(10)]
         [ProtoMember(4)]
-        public List<cdrAppVersion> Versions;
+        public List<CDRAppVersion> Versions;
 
         [BlobField(12)]
         [ProtoMember(5)]
-        public List<cdrFileSystem> FileSystems;
+        public List<CDRFileSystem> FileSystems;
 
         [BlobField(14)]
         [ProtoMember(6)]

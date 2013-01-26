@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
 {
     [ProtoContract]
-    public class cdrAppVersion
+    public class CDRAppVersion
     {
         [BlobField(2)]
         [ProtoMember(1)]

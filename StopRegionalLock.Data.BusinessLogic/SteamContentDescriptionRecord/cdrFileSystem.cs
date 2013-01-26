@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
 {
     [ProtoContract]
-    public class cdrFileSystem
+    public class CDRFileSystem
     {
         [BlobField(1)]
         [ProtoMember(1)]

@@ -8,21 +8,21 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
     /// Content Description Record blob entry
     /// </summary>
     [ProtoContract]
-    public class cdrCDR
+    public class CDR
     {
         /// <summary>
         /// List of Applications
         /// </summary>
         [BlobField(1)]
         [ProtoMember(1)]
-        public List<cdrApplication> Applications;
+        public List<CDRApplication> Applications;
 
         /// <summary>
         /// List of Subscriptions
         /// </summary>
         [BlobField(2)]
         [ProtoMember(2)]
-        public List<cdrSubscription> Subscriptions;
+        public List<CDRSubscription> Subscriptions;
 
     }
 }

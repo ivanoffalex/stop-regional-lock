@@ -9,7 +9,7 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
     /// Subscription blob entry
     /// </summary>
     [ProtoContract]
-    public class cdrSubscription
+    public class CDRSubscription
     {
         /// <summary>
         /// Subscription Id
