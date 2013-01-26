@@ -132,7 +132,12 @@ namespace StopRegionalLock.Common
                             {
                                 jw.Formatting = Formatting.Indented;
 
-                                JsonSerializer serializer = new JsonSerializer();
+                                JsonSerializer serializer = new JsonSerializer() 
+                                { 
+                                    DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                                    DateParseHandling = DateParseHandling.DateTime,
+                                    DateTimeZoneHandling = DateTimeZoneHandling.Unspecified
+                                };
                                 serializer.Serialize(jw, _container);
                             }
                         }
