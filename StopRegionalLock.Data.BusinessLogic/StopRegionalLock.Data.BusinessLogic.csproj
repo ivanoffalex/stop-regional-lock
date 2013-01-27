@@ -42,6 +42,7 @@
       <HintPath>..\packages\SteamKit2.1.3.0\lib\net40\SteamKit2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data" />
@@ -53,7 +54,8 @@
     <Compile Include="SteamContentDescriptionRecord\CDRAppVersion.cs" />
     <Compile Include="SteamContentDescriptionRecord\CDR.cs" />
     <Compile Include="SteamContentDescriptionRecord\CDRFileSystem.cs" />
-    <Compile Include="SteamContentDescriptionRecord\CDRServerConfig.cs" />
+    <Compile Include="SteamContentDescriptionRecord\CDRConfig.cs" />
+    <Compile Include="SteamContentDescriptionRecord\CDRManager.cs" />
     <Compile Include="SteamContentDescriptionRecord\CDRSubscription.cs" />
   </ItemGroup>
   <ItemGroup>

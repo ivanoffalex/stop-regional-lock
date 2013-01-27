@@ -21,13 +21,8 @@ namespace StopRegionalLock.WebSite
         {
             typeof(MvcApplication).Info("Application");
 
-            CDRConfig.Instance.ServerCacheTime = DateTime.Now;
-            CDRConfig.Instance.ConfigServers.Add(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8080));
-            CDRConfig.Instance.ConfigServers.Add(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8088));
-            CDRConfig.Instance.CSDSServers.Add(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9090));
-            CDRConfig.Save();
-
-            CDRConfig.Instance.ServerCacheTime.ToShortDateString();
+            CDRManager.PrepareServers();
+            CDRManager.Update();
 
             using (var db = 
                 new DbManager(ConfigurationManager.AppSettings["DbProvider"], string.Empty))

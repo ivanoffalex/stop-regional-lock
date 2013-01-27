@@ -2,12 +2,14 @@
 using SteamKit2;
 using SteamKit2.Blob;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
 {
     /// <summary>
     /// Subscription blob entry
     /// </summary>
+    [DebuggerDisplay("SubscriptionId={SubscriptionId} Name={Name}")]
     [ProtoContract]
     public class CDRSubscription
     {
@@ -23,14 +25,14 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
         /// </summary>
         [BlobField(2)]
         [ProtoMember(2)]
-        public int Name;
+        public string Name;
 
         /// <summary>
         /// Billing Type
         /// </summary>
         [BlobField(3)]
         [ProtoMember(3)]
-        public EBillingType BillingType;
+        public short BillingType;
 
         /// <summary>
         /// Cost (in cents)
@@ -38,14 +40,6 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
         [BlobField(4)]
         [ProtoMember(4)]
         public int Cost;
-
-        ///// <summary>
-        ///// Period (in minutes)
-        ///// </summary>
-        //[BlobField(5)]
-        //[ProtoMember(5)]
-        //public int Period;
-        
 
         [BlobField(6)]
         [ProtoMember(5)]
@@ -126,7 +120,7 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
         /// </summary>
         [BlobField(18)]
         [ProtoMember(16)]
-        public int GameCodeDescription;
+        public string GameCodeDescription;
 
         /// <summary>
         /// Is disabled

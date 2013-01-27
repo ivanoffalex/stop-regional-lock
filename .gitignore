@@ -109,3 +109,4 @@ UpgradeLog*.XML
 
 # Runtime configs
 StopRegionalLock.WebSite/runtime.config
+StopRegionalLock.WebSite/cdr.proto

@@ -40,6 +40,12 @@ namespace StopRegionalLock.Common
 
                 _configFilepath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, filename);
 
+                string directory = Path.GetDirectoryName(_configFilepath);
+                if (!Directory.Exists(directory))
+                {
+                    Directory.CreateDirectory(directory);
+                }
+
                 if (!File.Exists(_configFilepath))
                 {
                     _container = new Dictionary<string, object>();

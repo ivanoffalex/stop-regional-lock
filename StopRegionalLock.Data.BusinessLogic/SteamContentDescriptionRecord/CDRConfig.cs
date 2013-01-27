@@ -53,10 +53,10 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
 
         #endregion
 
-        public class CDRSettings
+        public class Settings
         {
-            //public byte[] CDRHash { get; set; }
-            //public DateTime CDRCacheTime { get; set; }
+            public byte[] CDRHash { get; set; }
+            public DateTime CDRCacheTime { get; set; }
 
             [JsonConverter(typeof(IPEndpointConverter))]
             public HashSet<IPEndPoint> ConfigServers = new HashSet<IPEndPoint>();
@@ -67,11 +67,11 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
             public DateTime ServerCacheTime;
         }
 
-        public static CDRSettings Instance
+        public static Settings Instance
         {
             get
             {
-                return RuntimeConfig.GetSection<CDRSettings>(SECTION_NAME, () => new CDRSettings());
+                return RuntimeConfig.GetSection<Settings>(SECTION_NAME, () => new Settings());
             }
         }
 

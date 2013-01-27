@@ -1,19 +1,21 @@
 ﻿using ProtoBuf;
 using SteamKit2.Blob;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
 {
+    [DebuggerDisplay("ApplicationId={ApplicationId} Name={Name}")]
     [ProtoContract]
     public class CDRApplication
     {
-        [BlobField(2)]
-        [ProtoMember(1)]
-        public string Name;
-
         [BlobField(1)]
-        [ProtoMember(2)]
+        [ProtoMember(1)]
         public int ApplicationId;
+
+        [BlobField(2)]
+        [ProtoMember(2)]
+        public string Name;
 
         [BlobField(11)]
         [ProtoMember(3)]
