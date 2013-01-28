@@ -113,12 +113,12 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
                     config.ServerCacheTime = DateTime.Now.AddDays(30);
                     CDRConfig.Save();
 
-                    typeof(CDRManager).Info(" Done!");
+                    typeof(CDRManager).Info("Done");
                     return;
                 }
                 else if (config.CSDSServers.Count == 0 || config.ConfigServers.Count == 0)
                 {
-                    typeof(CDRManager).Info(" Unable to get server list");
+                    typeof(CDRManager).Info("Unable to get server list");
                     return;
                 }
             }
