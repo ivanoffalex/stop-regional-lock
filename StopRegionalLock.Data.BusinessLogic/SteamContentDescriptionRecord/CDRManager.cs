@@ -19,7 +19,7 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
 
         public static void Update()
         {
-            Console.Write("Updating CDR...");
+            typeof(CDRManager).Info("Updating CDR...");
 
             CDRConfig.Settings config = CDRConfig.Instance;
 
@@ -86,6 +86,7 @@ namespace StopRegionalLock.Data.BusinessLogic.SteamContentDescriptionRecord
             }
             else
             {
+                typeof(CDRManager).Info("Load cached copy");
                 using (FileStream fs = File.Open(filename, FileMode.Open))
                 using (DeflateStream ds = new DeflateStream(fs, CompressionMode.Decompress))
                     cdrObj = ProtoBuf.Serializer.Deserialize<CDR>(ds);

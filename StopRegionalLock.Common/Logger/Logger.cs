@@ -14,7 +14,7 @@ namespace StopRegionalLock.Common.Logger
             string setupLocation = AppDomain.CurrentDomain.SetupInformation.ConfigurationFile;
             XDocument xml = XDocument.Load(setupLocation);
             XElement xnode = xml.Root.Element("appSettings");
-            string appSettingsFile = (xnode.Attribute("file") != null) ? xnode.Attribute("file").Value : null;
+            string appSettingsFile = (xnode != null && xnode.Attribute("file") != null) ? xnode.Attribute("file").Value : null;
 
             if (!string.IsNullOrEmpty(appSettingsFile))
             {
