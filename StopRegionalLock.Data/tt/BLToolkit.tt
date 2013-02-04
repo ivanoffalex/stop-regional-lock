@@ -1,0 +1,14 @@
+﻿<#@ template language="C#" hostspecific="True" debug="True" #> 
+<#@ output extension=".generated.cs"   #> 
+
+<#@ include file="..\..\.t4\BLToolkit\BLToolkit.ttinclude" #> 
+<#@ include file="..\..\.t4\BLToolkit\PostgreSQL.ttinclude" #> 
+<#@ include file="..\..\.t4\BLToolkit\PluralSingular.ttinclude" #> 
+<# 
+  ConnectionString = "Server=127.0.0.1;Port=5432;Database=regionlock;User Id=postgres;Password=1q2w3e;"; 
+  DataProviderAssembly = @"..\..\packages\Npgsql.2.0.12.1\lib\net40\Npgsql.dll"; 
+  Namespace       = "StopRegionalLock.Data";
+  DataContextName = "StopRegionalLockContext";
+  DatabaseQuote = new [] { "\\\"" };
+  GenerateModel(); 
+#>

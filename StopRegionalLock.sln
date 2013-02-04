@@ -29,6 +29,32 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopRegionalLock.Data.Busin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StopRegionalLock.Console", "StopRegionalLock.Console\StopRegionalLock.Console.csproj", "{FE534378-DE65-406D-8874-F72E457359BC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".t4", ".t4", "{E55FB547-F1E3-48AD-B037-EF73D0730432}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BLToolkit", "BLToolkit", "{F939FADD-0170-4166-AAEC-F5E40DAEE500}"
+	ProjectSection(SolutionItems) = preProject
+		.t4\BLToolkit\BLT4Toolkit.ttinclude = .t4\BLToolkit\BLT4Toolkit.ttinclude
+		.t4\BLToolkit\BLToolkit.ttinclude = .t4\BLToolkit\BLToolkit.ttinclude
+		.t4\BLToolkit\BLToolkitConstants.Revision.cs.template = .t4\BLToolkit\BLToolkitConstants.Revision.cs.template
+		.t4\BLToolkit\MSSQL.ttinclude = .t4\BLToolkit\MSSQL.ttinclude
+		.t4\BLToolkit\MySql.ttinclude = .t4\BLToolkit\MySql.ttinclude
+		.t4\BLToolkit\PluralSingular.ttinclude = .t4\BLToolkit\PluralSingular.ttinclude
+		.t4\BLToolkit\PostgreSQL.ttinclude = .t4\BLToolkit\PostgreSQL.ttinclude
+		.t4\BLToolkit\Renamer.ttinclude = .t4\BLToolkit\Renamer.ttinclude
+		.t4\BLToolkit\Sybase.ttinclude = .t4\BLToolkit\Sybase.ttinclude
+		.t4\BLToolkit\ValidationAttributes.ttinclude = .t4\BLToolkit\ValidationAttributes.ttinclude
+		.t4\BLToolkit\VB.ttinclude = .t4\BLToolkit\VB.ttinclude
+		.t4\BLToolkit\WCFAttributes.ttinclude = .t4\BLToolkit\WCFAttributes.ttinclude
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".scripts", ".scripts", "{06CCE0D8-E697-4C08-9C66-EEE8056C511D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PostGRE", "PostGRE", "{D38DE5A4-B5FF-45E3-8121-1A04A0A91B6C}"
+	ProjectSection(SolutionItems) = preProject
+		.scripts\PostGRE\createDB.sql = .scripts\PostGRE\createDB.sql
+		.scripts\PostGRE\createSchema.sql = .scripts\PostGRE\createSchema.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +84,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F939FADD-0170-4166-AAEC-F5E40DAEE500} = {E55FB547-F1E3-48AD-B037-EF73D0730432}
+		{D38DE5A4-B5FF-45E3-8121-1A04A0A91B6C} = {06CCE0D8-E697-4C08-9C66-EEE8056C511D}
 	EndGlobalSection
 EndGlobal
