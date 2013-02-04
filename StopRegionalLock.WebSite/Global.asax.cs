@@ -1,5 +1,4 @@
-﻿using BLToolkit.Data;
-using MaxMind.GeoIP;
+﻿using MaxMind.GeoIP;
 using StopRegionalLock.Common;
 using StopRegionalLock.Common.GeoLocation;
 using StopRegionalLock.Data;
@@ -23,16 +22,8 @@ namespace StopRegionalLock.WebSite
         {
             typeof(MvcApplication).Info("Application");
 
-            CDRManager.PrepareServers();
-            CDRManager.Update();
-
-            using (var db = 
-                new DbManager(ConfigurationManager.AppSettings["DbProvider"], string.Empty))
-            {
-                db.SetCommand("SELECT 1");
-                int i = db.ExecuteScalar<int>();
-                Debug.Write(i);
-            }
+            //CDRManager.PrepareServers();
+            //CDRManager.Update();
 
             using (var db =
                 new StopRegionalLockContext(ConfigurationManager.AppSettings["DbProvider"], string.Empty))
