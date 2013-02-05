@@ -11,12 +11,17 @@ WITH (
 ALTER TABLE "Subscription"
   OWNER TO postgres;
 
+-- Table: "Country"
+
+-- DROP TABLE "Country";
+
 CREATE TABLE "Country"
 (
   "CountryId" integer NOT NULL,
+  "Code" character varying(2) NOT NULL,
   "Name" text NOT NULL,
-  "NativeName" text NOT NULL,
-  "ShortName" character varying(2) NOT NULL,
+  "NativeName" text,
+  "System" smallint NOT NULL DEFAULT 0,
   CONSTRAINT "Country_PK" PRIMARY KEY ("CountryId")
 )
 WITH (
