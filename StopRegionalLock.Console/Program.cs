@@ -20,12 +20,11 @@ namespace StopRegionalLock.Console
             string provider = ConfigurationManager.AppSettings["DbProvider"];
 
             using (var db =
-            new StopRegionalLockContext(provider, string.Empty))
+                new StopRegionalLockContext(ConfigurationManager.AppSettings["DbProvider"], string.Empty))
             {
-                var items = from subs in db.Subscriptions where subs.SubscriptionId != 5 select subs.Name;
+                var items = from c in db.Countries where c.Name.StartsWith("U") select c.Name;
                 var iii = items.ToArray();
             }
-
 
             CDRSynchronizer();
         }

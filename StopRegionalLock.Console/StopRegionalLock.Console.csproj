@@ -38,6 +38,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\BLToolkit.4.1.17\lib\net40-full\BLToolkit.4.dll</HintPath>
     </Reference>
+    <Reference Include="BLToolkit.Data.DataProvider.PostgreSQL.4">
+      <HintPath>..\packages\BLToolkit.PostgreSql.4.1.17\lib\net40\BLToolkit.Data.DataProvider.PostgreSQL.4.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Npgsql.2.0.12.1\lib\net40\Mono.Security.dll</HintPath>
@@ -87,6 +90,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir).tools\BLTgen\BLTgen.4.exe $(TargetDir)StopRegionalLock.Data.Dll /O:$(TargetDir) /K:$(SolutionDir)StopRegionalLock.snk /D</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

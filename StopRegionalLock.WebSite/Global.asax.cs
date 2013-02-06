@@ -22,17 +22,14 @@ namespace StopRegionalLock.WebSite
         {
             typeof(MvcApplication).Info("Application");
 
-            //CDRManager.PrepareServers();
-            //CDRManager.Update();
-
             using (var db =
                 new StopRegionalLockContext(ConfigurationManager.AppSettings["DbProvider"], string.Empty))
             {
-                var items = from subs in db.Subscriptions where subs.SubscriptionId != 5 select subs.Name;
+                var items = from c in db.Countries where c.Name.StartsWith("U") select c.Name;
                 var iii = items.ToArray();
             }
 
-            MaxMind.GeoIP.Country c = GeoManager.Instance.GetCountryByIp("194.135.115.89");
+            MaxMind.GeoIP.Country gc = GeoManager.Instance.GetCountryByIp("194.135.115.89");
 
             AreaRegistration.RegisterAllAreas();
 

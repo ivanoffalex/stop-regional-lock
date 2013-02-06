@@ -32,7 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MaxMind.GeoIP">
+    <Reference Include="MaxMind.GeoIP, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MaxMind.GeoIP.2.1.17\lib\net35\MaxMind.GeoIP.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
